@@ -1,0 +1,10 @@
+def p_N(x):
+    return #zavrsni izracun od Pn na papiru
+y_N = [p_N(x1[i]) for i in range(len(x1))]
+%matplotlib inline
+plt.figure(figsize=(12, 6))
+plt.plot(x1, y1, 'c.', label='${p_L}(x)$')
+plt.plot(x1, y_N, 'b:', label='${p_N}(x)$')
+plt.plot(x0, y0, 'ro', label='$T_i$')
+plt.legend(fontsize = 16)
+plt.show()
