@@ -8,3 +8,19 @@ plt.plot(x1, y_N, 'b:', label='${p_N}(x)$')
 plt.plot(x0, y0, 'ro', label='$T_i$')
 plt.legend(fontsize = 16)
 plt.show()
+
+#za izracun 
+def f(x):
+    return np.sin(np.pi/2*x) #funkcija za f
+
+x0, x1, x2 = -2, 1, 2 #xevi
+
+y0, y1, y2 = f(x0), f(x1), f(x2) #y preko f
+
+print(np.round([y0, y1, y2], 4))
+
+def p_N(x):
+    return 1/3*(x+2) -1/3 * (x+2)*(x-1) #zavrsna funkcija za P_n
+
+print (np.round([y0, y1, y2], 4))
+print (p_N(np.array([x0, x1, x2])))
