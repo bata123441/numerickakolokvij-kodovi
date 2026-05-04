@@ -1,0 +1,16 @@
+def f(x: float) -> float:
+    return x**2
+
+xp = np.array([-2, 0, 1, 2])    #apscise za interpolaciju
+yp = f(xp)                      #ordinate za interpolaciju
+
+x = np.linspace(min(xp), max(xp), 100) #apscise za crtanje
+
+S_1 = sp.interpolate.interp1d(xp, yp, kind = 'linear') #funkcija za linearnu interpolaciju kroz 10 točaka
+
+plt.figure(figsize=(6, 6))
+plt.plot(xp, yp, 'ro', label='$T_i=(x_i, y_i)$')
+plt.plot(x, S_1(x), 'c', label='$S_1(x)$')
+plt.plot(x, f(x), 'm:', label='$x^2$')
+plt.legend(fontsize = 10)
+plt.show()
