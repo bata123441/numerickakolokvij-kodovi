@@ -13,5 +13,5 @@ Q, R = np.linalg.qr(A)
 x, _, _, _ = np.linalg.lstsq(R, Q.T @ b, rcond = None)
 print(x)
 
-beta, alpha = x[0, 0], x[1, 0]
+beta, alpha = x[1, 0], x[0, 0]
 print("beta =", beta, ", alpha =", alpha)
